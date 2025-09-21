@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.Metrics;
+﻿
 
 namespace MyAdventure
 {
@@ -13,7 +13,7 @@ namespace MyAdventure
 
         public void Start()
         {
-            Console.WriteLine("Enter your name, if you dare to begin your adventure ");
+            Console.WriteLine("Enter your name, if you dare to begin your adventure. BE AWARE, THERE IS NO TURNING BACK FROM THIS POINT!! ");
             string name = Console.ReadLine();
 
             Console.WriteLine($"WELCOME: {name} : indeed you are of the brave ones. \nChoose a class: \n[1] Warrior \n[2] Mage");
@@ -21,7 +21,6 @@ namespace MyAdventure
             string classChoice = choice == "1" ? "Warrior" : "Mage";
 
             player = new Player(name, classChoice);
-
             Console.Clear();
 
             Console.WriteLine($"Welcome {name} the legendary {classChoice} to an adventure of a lifetime, be prepared to fight. Enemy shows no mercy!!");
